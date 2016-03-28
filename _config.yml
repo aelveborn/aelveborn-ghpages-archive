@@ -1,0 +1,46 @@
+# Site settings
+title: Andreas Älveborn | aelveborn.com
+email: aelveborn@gmail.com
+description: I'm a web developer from Sweden that's focused on all aspects of the web including UI/UX design, front- and back-end development. This is my personal website with an awesome tech blog.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://aelveborn.com" # the base hostname & protocol for your site
+author: "Andreas Älveborn"
+paginate: 4
+paginate_path: "/blog/page-:num/"
+
+# Social
+github: "https://github.com/aelveborn"
+twitter: "https://twitter.com/aelveborn"
+instagram: "https://instagram.com/aelveborn"
+dribbble: "https://dribbble.com/aelveborn"
+google: "https://plus.google.com/u/0/116824427674131557004/posts"
+linkedin: "https://www.linkedin.com/profile/view?id=397343590"
+
+# Collections
+collections:
+  projects:
+    output: true
+
+
+# Defaults
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      categories: blog
+      author: "Andreas Älveborn"
+  -
+    scope:
+      path: "projects"
+    values:
+      layout: "project"
+      author: "Andreas Älveborn"
+
+# Build settings
+markdown: kramdown
+highlighter: pygments
+
+exclude: ["node_modules", "gruntfile.js", "package.json", "README.md"]

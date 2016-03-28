@@ -1,0 +1,55 @@
+---
+layout: master
+---
+
+<main>
+
+	<article class="post">
+
+		<!-- Header -->
+		<header class="post-header">
+
+			<!-- Title -->
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-10 col-sm-push-1">
+
+						<h1 class="post-title orphans">
+							{{ page.title }}
+						</h1>
+
+					</div>
+				</div>
+			</div>
+			<!-- /Title -->
+
+			<!-- Meta -->
+			{% include post_meta.html %}
+			<!-- /Meta -->
+
+		</header>
+		<!-- /Header -->
+
+		{% if page.hero %}
+		<div class="post-figure">
+			<figure class="banner">
+				<img src="{{ page.hero | prepend: site.baseurl }}" />
+			</figure>
+		</div>
+		{% endif %}
+
+		<!-- Content -->
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-10 col-sm-push-1">
+					<article class="post-content content">
+						{{ content }}
+					</article>
+				</div>
+			</div>
+		</div>
+		<!-- /Content -->
+
+	</article>
+
+</main>

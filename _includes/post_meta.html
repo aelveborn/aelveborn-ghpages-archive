@@ -1,0 +1,20 @@
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12 col-sm-10 col-sm-push-1">
+			<div class="post-meta">
+				<time datetime="{{page.date | date_to_rfc822}}" class="post-date">
+					<i class="material-icons">schedule</i>{{ page.date | date: "%b %-d, %Y" }}
+				</time>
+				<span class="post-category">
+					<i class="material-icons">loyalty</i>
+
+					<ul class="tags">
+					{% for tag in page.tags %}
+						<li><a href="{{ site.baseurl }}/tags/#{{tag}}" title="See all post on {{tag}}" class="link">{{tag}}</a></li>
+					{% endfor %}
+					</ul>
+				</span>
+			</div>
+		</div>
+	</div>
+</div>

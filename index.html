@@ -1,0 +1,176 @@
+---
+layout: master
+---
+
+<section class="section-owl">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-12">
+				<img src="{{ "/build/design/polygon-owl.png" | prepend: site.baseurl }}" />
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section-me">
+	<div class="container">
+
+		<div class="row">
+			<div class="col-xs-12 col-md-6 col-md-offset-1">
+				<h1>Andreas Älveborn</h1>
+				<p>
+
+					I'm a web developer from Sweden that's focused on all aspects of the web including UI/UX design, front- and back-end development. I'm also very interested in computer security and tinkering with servers, raspeberrys and everything else that's fun.
+				</p>
+				<p>
+					I've studied computer science in Karlstad, Sweden and I'm currently employed by <a href="http://knowit.se" title="knowit" target="_bank">knowit</a> where I'm involved in just about everything regarding web development — from the first meet and greet to the finished solution.
+				</p>
+			</div>
+
+			<div class="col-xs-12 col-md-5 text-center">
+				<aside class="aside-about">
+					<a class="btn btn-default" href="/resume/" role="button">Read my super fancy resumé</a>
+					<ul class="resume">
+						<li>
+							<a href="https://www.youtube.com/watch?v=tDOF4WER5ag" title="" target="_blank" class="link">— born 1986 in Sweden —</a>
+						</li>
+						<li>
+							<a href="https://www.youtube.com/watch?v=JmTyrS-jfi0" title="" target="_blank" class="link">— studied computer science —</a>
+						</li>
+						<li>
+							<a href="https://www.youtube.com/watch?v=jMraCqBOMwI" title="" target="_blank" class="link">— became awesome —</a>
+						</li>						
+					</ul>
+				</aside>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section-social">
+	<figure class="content">
+		<img src="{{ "/build/design/low-poly-texture.jpg" | prepend: site.baseurl }}" />
+		<figcaption>
+			<div class="inner">
+			<h3>— this is me —</h3>
+			<ul class="social-list">
+				<li>
+					<a href="{{site.github}}" title="Github" rel="me" target="_blank">
+						<i class="fa fa-github"></i>
+						Github
+					</a>
+				</li>
+				<li>
+					<a href="{{site.twitter}}" title="Twitter" rel="me" target="_blank">
+						<i class="fa fa-twitter"></i>
+						Twitter
+					</a>
+				</li>
+				<li>
+					<a href="{{site.instagram}}" title="Instagram" rel="me" target="_blank">
+						<i class="fa fa-instagram"></i>
+						Instagram
+					</a>
+				</li>
+				<li>
+					<a href="{{site.dribbble}}" title="dribbble" rel="me" target="_blank">
+						<i class="fa fa-dribbble"></i>
+						dribbble
+					</a>
+				</li>
+				<li>
+					<a href="{{site.google}}" title="Google+" rel="me" target="_blank">
+						<i class="fa fa-google-plus"></i>
+						Google+
+					</a>
+				</li>
+				<li>
+					<a href="{{site.linkedin}}" title="LinkedIn" rel="me" target="_blank">
+						<i class="fa fa-linkedin"></i>
+						LinkedIn
+					</a>
+				</li>
+			</ul>
+			</div>
+		</figcaption>
+	</figure>
+</section>
+
+<section class="section-project">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-md-7">
+				<a href="#" title="">
+					<img src="{{ "/build/design/low-poly-texture.jpg" | prepend: site.baseurl }}" />
+				</a>
+			</div>
+			<div class="col-xs-12 col-md-4 col-md-offset-1">
+				<a href="#" title="">
+					<h3 class="title">
+						A project  with a longer name
+					</h3>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo quod possimus minima laboriosam, nostrum repudiandae blanditiis atque quis assumenda enim dolorum cum adipisci sit totam amet voluptatibus excepturi autem natus!
+					</p>
+				</a>
+				<a href="#" class="link" title="">— graphics —</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section-project">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-md-5 col-md-offset-1 col-md-push-4">
+				<a href="#" title="">
+					<img src="http://lorempixel.com/800/600" />
+				</a>
+			</div>
+			<div class="col-xs-12 col-md-4 col-md-pull-6 col-lg-3 col-lg-offset-1 col-lg-pull-6 text-right">
+				<a href="#" title="">
+					<h3 class="title">
+						A project
+					</h3>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo quod possimus minima laboriosam, nostrum repudiandae blanditiis atque quis assumenda enim dolorum cum adipisci.
+					</p>
+					<a href="#" class="link" title="">— website —</a>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="column-listing">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 text-center">
+				<header>
+					<h1>The blog</h1>
+					<a href="/blog/" title="Go to the blog">— To the blog! —</a>
+				</header>
+			</div>
+
+			{% for post in site.posts limit:4 %}
+			<div class="col-xs-12 col-md-6">
+				<article class="post-item">
+					<a href="{{post.url}}" title="Read: {{post.title}}">
+
+						<time datetime="{{post.date | date_to_rfc822}}">
+							{{ post.date | date: "%b %-d, %Y" }}
+						</time>
+
+						{% for category in post.categories %}
+						<span class="label label-default">{{category}}</span>
+						{% endfor %}
+
+						<h3 class="title">{{post.title}}</h3>
+					</a>
+				</article>
+			</div>
+			{% endfor %}
+
+		</div>
+	</div>
+</section>
